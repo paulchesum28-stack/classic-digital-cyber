@@ -187,7 +187,14 @@
       <li>Resume Writing (Professional CV)</li>
     </ul>
 
-    <h3>Other Services:</h3>
+    <h3>Core Services:</h3>
+    <ul>
+      <li><strong>Printing & Photocopying</strong> – High quality and fast service</li>
+      <li><strong>Scanning Services</strong> – Clear and secure document scanning</li>
+      <li><strong>KRA, HELB & eCitizen Applications</strong> – All online government services</li>
+      <li><strong>Poster & Graphic Design</strong> – Posters, cards, and branding</li>
+      <li><strong>Typing & Report Writing</strong> – Professional document preparation</li>
+      <li><strong>Internet Browsing</strong> –
     <ul>
       <li>All Cyber Services (Printing, Scanning, Browsing)</li>
       <li>Graphic Design (Wedding Cards, Eulogies, Posters)</li>
@@ -250,9 +257,13 @@ let index = 0;
 
 function showSlides() {
   slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+
   index++;
-  if (index > slides.length) { index = 1; }
-  slides[index - 1].classList.add('active');
+  if (index >= slides.length) {
+    index = 0;
+  }
+
   setTimeout(showSlides, 3000);
 }
 
