@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Digital Cyber</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; color:#fff; background:url('logo.png') no-repeat center center fixed; background-size:cover;}
+    .overlay {background: rgba(0,0,0,0.9); min-height:100vh;}
+
+    header {text-align:center; padding:30px 20px;}
+    header img {width:120px; display:block; margin:0 auto 10px;}
+
+    nav {background: rgba(0,0,0,0.8); padding:12px; text-align:center;}
+    nav a {color:#ffb300; margin:0 15px; text-decoration:none; font-weight:bold;}
+    nav a:hover {color:#fff;}
+
+    .container {padding:20px; max-width:1000px; margin:auto;}
+
+    .card {background: rgba(255,255,255,0.1); padding:20px; margin:20px 0; border-radius:12px; backdrop-filter: blur(10px); border:1px solid rgba(255,179,0,0.3);}
+
+    /* SLIDESHOW */
+    .slideshow {position:relative; width:100%; height:300px; overflow:hidden; border-radius:10px;}
+    .slide {position:absolute; width:100%; height:100%; opacity:0; transition:opacity 1s ease-in-out;}
+    .slide img {width:100%; height:100%; object-fit:cover;}
+    .active {opacity:1;}
+
+    .btn {display:inline-block; margin-top:15px; padding:10px 20px; background:#ffb300; color:black; text-decoration:none; border-radius:6px; font-weight:bold;}
+    .btn:hover {background:#ffa000;}
+
+    footer {text-align:center; padding:15px; background: rgba(0,0,0,0.8);}    
+
+    .whatsapp {position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50%; text-decoration:none;}
+  </style>
+</head>
+<body>
+<div class="overlay">
+
+<header>
+  <img src="logo.png" alt="Logo">
+  <h1>Classic Digital Cyber</h1>
+  <p>Your One Stop Digital Partner</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+  <div class="card" id="about">
+    <h2>About Us</h2>
+    <p>We provide fast, reliable and affordable cyber services in Eldoret. We help students, businesses and individuals access digital services easily.</p>
+  </div>
+
+  <div class="card" id="services">
+    <h2>Our Services</h2>
+
+    <div class="slideshow">
+      <div class="slide active"><img src="printing.jpg"></div>
+      <div class="slide"><img src="scanning.jpg"></div>
+      <div class="slide"><img src="design.jpg"></div>
+      <div class="slide"><img src="typing.jpg"></div>
+    </div>
+
+    <p><strong>We serve at the comfort of your home</strong></p>
+
+    <h3>Core Services:</h3>
+    <ul>
+      <li><strong>Printing & Photocopying</strong> – High quality and fast service</li>
+      <li><strong>Scanning Services</strong> – Clear and secure document scanning</li>
+      <li><strong>KRA, HELB & eCitizen Applications</strong> – All online government services</li>
+      <li><strong>Poster & Graphic Design</strong> – Posters, cards, and branding</li>
+      <li><strong>Typing & Report Writing</strong> – Professional document preparation</li>
+      <li><strong>Internet Browsing</strong> – Fast and reliable access</li>
+    </ul>
+
+    <h3>Applications For:</h3>
+    <ul>
+      <li>HELB</li>
+      <li>KRA PIN & Lost PIN Retrieval</li>
+      <li>KRA Returns</li>
+      <li>NHIF Registration & Facility Change</li>
+      <li>SHIF/SHA Registration</li>
+      <li>NSSF Registration</li>
+      <li>NTSA TMIS Registration</li>
+      <li>Good Conduct</li>
+      <li>Driving License Renewal</li>
+      <li>Smart Driving License</li>
+      <li>KUCCPS Applications</li>
+      <li>Passport Application</li>
+      <li>Resume Writing</li>
+    </ul>
+
+    <h3>Other Services:</h3>
+    <ul>
+      <li>All Cyber Services</li>
+      <li>Graphic Design</li>
+      <li>Computer Maintenance</li>
+      <li>Printer Maintenance</li>
+      <li>Computer Project Coaching</li>
+      <li>Career Guidance</li>
+      <li>Stationery</li>
+      <li>Electronics</li>
+    </ul>
+
+    <p><strong>QUALITY IS OUR PRIORITY</strong></p>
+  </div>
+
+  <div class="card" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Location:</strong> Eldoret</p>
+    <p><strong>Phone:</strong> 0705197812</p>
+    <p><strong>Email:</strong> paulchesum28@gmail.com</p>
+    <a href="https://wa.me/254705197812" class="btn">Chat on WhatsApp</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Classic Digital Cyber</p>
+</footer>
+
+<a href="https://wa.me/254705197812" class="whatsapp">💬</a>
+
+</div>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+  index = (index + 1) % slides.length;
+  setTimeout(showSlides, 3000);
+}
+
+showSlides();
+</script>
+
+</body>
+</html>
